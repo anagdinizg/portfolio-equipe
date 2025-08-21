@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-equipe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scripts.js",
+  "scripts": {
+    "start": "node scripts.js",
+    "dev": "node --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anagdinizg/portfolio-equipe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anagdinizg/portfolio-equipe/issues"
+  },
+  "homepage": "https://github.com/anagdinizg/portfolio-equipe#readme"
+}
