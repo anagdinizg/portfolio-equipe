@@ -5,6 +5,11 @@
   --brown: #6b4c3b;
   --text: #3d2b1f;
   --highlight: #d1b89d;
+  --white: #ffffff;
+  --off-white: #f8f4f1;
+  --brown-transparent: #6b4c3bb3;
+  --black-shadow: rgba(0, 0, 0, 0.1);
+  --black-shadow-strong: rgba(0, 0, 0, 0.08);
 }
 
 * {
@@ -22,7 +27,7 @@ body {
 
 .header {
   background: linear-gradient(135deg, var(--light-brown), var(--brown));
-  color: white;
+  color: var(--white);
   padding: 1rem 1rem;
   text-align: center;
   border-bottom-left-radius: 50px;
@@ -37,7 +42,7 @@ body {
 .header p {
   font-size: 1.25rem;
   font-style: italic;
-  color: #f8f4f1;
+  color: var(--off-white);
 }
 
 .profile-info {
@@ -53,8 +58,8 @@ body {
   height: 100px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 3px solid var(--white);
+  box-shadow: 0 4px 12px var(--black-shadow);
 }
 
 .profile-text h1 {
@@ -65,7 +70,7 @@ body {
 .profile-text p {
   font-size: 1.2rem;
   font-style: italic;
-  color: #f8f4f1;
+  color: var(--off-white);
 }
 
 .container {
@@ -75,10 +80,10 @@ body {
 }
 
 section {
-  background-color: white;
+  background-color: var(--white);
   padding: 2rem;
   border-radius: 25px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 20px var(--black-shadow-strong);
   margin-bottom: 2.5rem;
   border-left: 10px solid var(--highlight);
   transition: transform 0.3s ease;
@@ -126,7 +131,7 @@ ul li {
 
 .experience .time {
   font-size: 0.9rem;
-  color: #6b4c3bb3;
+  color: var(--brown-transparent);
   margin-bottom: 0.5rem;
 }
 
@@ -145,7 +150,7 @@ ul li {
 .project-card {
   background: var(--beige);
   border-radius: 20px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 20px var(--black-shadow-strong);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -196,14 +201,14 @@ ul li {
 
 .project-links a:hover {
   background: var(--light-brown);
-  color: white;
+  color: var(--white);
 }
 
 .contact-section {
-  background-color: white;
+  background-color: var(--white);
   padding: 2rem;
   border-radius: 25px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 20px var(--black-shadow-strong);
   border-left: 10px solid var(--highlight);
   margin-bottom: 2.5rem;
   transition: transform 0.3s ease;
@@ -259,7 +264,7 @@ ul li {
 
 .contact-form button:hover {
   background-color: var(--light-brown);
-  color: white;
+  color: var(--white);
 }
 
 .contact-section a {
@@ -274,7 +279,7 @@ ul li {
 
 .footer {
   background-color: var(--brown);
-  color: white;
+  color: var(--white);
   text-align: center;
   padding: 2rem;
   border-top-left-radius: 40px;
