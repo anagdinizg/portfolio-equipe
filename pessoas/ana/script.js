@@ -95,14 +95,64 @@ projects.forEach((project) => {
 function sendEmail(event) {
   event.preventDefault();
 
-  const message = document.getElementById("message").value;
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
 
-  const subject = "Portfólio";
-  const body = encodeURIComponent(message);
+  if (name === "" || email === "" || message === "") {
+    showModal("Por favor, preencha todos os campos antes de enviar.");
+    return;
+  }
+
+  if (!validateEmail(email)) {
+    showModal("Por favor, insira um e-mail válido.");
+    return;
+  }
+
+  const subject = `Portfólio - Contato de ${name}`;
+  const body = `Nome: ${name}\nEmail: ${email}\nMensagem:\n${message}`;
 
   const mailtoLink = `mailto:anagabrieladinizgusmao@gmail.com?subject=${encodeURIComponent(
     subject
-  )}&body=${body}`;
+  )}&body=${encodeURIComponent(body)}`;
 
   window.location.href = mailtoLink;
+
+  showModal(
+    "Obrigado pelo contato! Um novo e-mail está sendo aberto para envio."
+  );
 }
+
+function validateEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email.toLowerCase());
+}
+
+function showModal(message) {
+  const modal = document.getElementById("modal");
+  const modalMessage = document.getElementById("modal-message");
+  modalMessage.textContent = message;
+  modal.classList.remove("hidden");
+}
+
+function closeModal() {
+  const modal = document.getElementById("modal");
+  modal.classList.add("hidden");
+}
+
+const backToTopButton = document.getElementById("back-to-top");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTopButton.style.display = "block";
+  } else {
+    backToTopButton.style.display = "none";
+  }
+});
+
+backToTopButton.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
