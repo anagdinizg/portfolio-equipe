@@ -4,10 +4,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fernanda Alves</title>
+    <link rel="stylesheet" href="style-fernada.css">
     <script src="script.js" ></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Concert+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Portfólio de Fernanda Alves — desenvolvedora front-end apaixonada por tecnologia, com projetos em HTML, CSS e JavaScript.">
 </head>
 <body>
-    
+    <header>
+        <div>
+            <p><a href="/index.html">Página ínicial</a></p>
+        </div>
+        <div class="right">
+            <p><a href="#sobre-mim">Sobre mim</a></p>
+            <p><a href="#tecnologias">Tecnologias</a></p>
+            <p><a href="#projetos">Projetos</a></p>
+            <p><a href="#contatos">Contato</a></p>
+        </div>
+    </header>
+    <main>
+        <div class="titulo-page-sobre-mim">
+            <h2>So<span class="linha-pequena">bre m</span>im</h2> 
+        </div>
+        <div class="page-principal">
+            <section class="foto-principal">
+                <img id="self-fernanda" src="/pessoas/fernanda/img/foto-fernanda.jpeg" alt="self-fernanda">
+            </section>
+            <section class="texto-principal" id="sobre-mim">
+                <h1>
+                    Olá!<span class="estrela">✨</span>
+                </h1>
+                <br>
+                <p>Sou estudante de Sistemas de Informação apaixonada por tecnologia e desenvolvimento front-end. Tenho estudado HTML, CSS, JavaScript e já desenvolvi pequenos projetos práticos para aplicar o que aprendo.</p>
+                <br>
+                <p>Tenho experiência com trabalho em equipe, atendimento ao cliente e comunicação, habilidades que considero essenciais também na área tech.</p>
+                <br>
+                <p>Participo da administração Coderosa, projeto de extensão da UniFacisa, voltado para apoiar mulheres na tecnologia. Atualmente, busco uma oportunidade de estágio para aplicar meus conhecimentos, aprender com profissionais da área e evoluir cada dia mais.</p>
+            </section>
+        </div>
+        <div class="pagina-de-skills" id="tecnologias">
+            <section class="titulo-page-skills">    
+                <h2>Te<span class="linha-pequena">cnolog</span>ias</h2>            
+            </section>
+            <section class="cards-container">
+                <div class="cards">
+                    <section class="card1">
+                        <i class="fa-brands fa-html5"></i>
+                        <p>HTML</p>
+                    </section>
+                    <section class="card2">
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <p>CSS</p>
+                    </section>
+                    <section class="card3">
+                        <i class="fa-brands fa-js"></i>
+                        <P>JAVASCRIPT</P>
+                    </section>
+                    <section class="card4">
+                        <i class="fa-brands fa-figma"></i>
+                        <p>FIGMA</p>
+                    </section>
+                    <section class="card5">
+                        <i class="fa-brands fa-java"></i>
+                        <p>JAVA</p>
+                    </section>
+                    <section class="card6">
+                        <i class="fa-brands fa-python"></i>
+                        <P>PYTHON</P>
+                    </section>
+                </section>
+            </div>
+        </div>
+        <div class="titulo-page-projetos" id="projetos">
+            <h2>Pr<span class="linha-pequena">ojet</span>os</h2> 
+        </div>
+        <div class="container-card">
+            <div class="card-projeto-1">
+                <h2>Lobo PetShop LTDA</h2>
+                <div class="imagem-projeto-1">
+                    <img src="/pessoas/fernanda/img/petshop.png" alt="pagina-principal-de-um-petshop" id="page-petshop">
+                </div>
+                <button id="abrirModalPetshop">Saiba mais</button>
+            </div>
+            <div class="card-projeto-2">
+                <h2>TechConnect 2025 – Inovação para o Futuro</h2>
+                <div class="imagem-projeto-2">
+                    <img src="/pessoas/fernanda/img/evento.png" alt="pagina-principal-de-um-evento-tech" id="page-evento">
+                </div>
+                <button id="abrirModalTech">Saiba mais</button>
+            </div>
+        </div>
+        <div class="titulo-page-contatos" id="contatos">
+            <h2>C<span class="linha-pequena">ontat</span>o</h2>
+        </div>
+        <section class="formulario-de-contato" id="contato">
+            <form id="form-contato">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <div id="mensagem-sucesso" style="display: none;">
+                <p>Obrigado por entrar em contato! 😊</p>
+            </div>
+        </section>
+        <section class="meus-contatos">
+        <section class="meus-contatos">
+            <h3>Minhas redes</h3>
+            <div class="icones-contato">
+                <a href="mailto:fernanda.alvs2@gmail.com" target="_blank">
+                <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/fernanda-alves-6740671b6/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/fernandlvs" target="_blank">
+                <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+    <button onclick="irParaTopo()" class="btn-topo" id="btnTopo">↑</button>
+    <div id="modal-projeto-petshop" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar-modal" id="fecharModalPetshop">&times;</span>
+            <h2>Detalhes do Projeto</h2>
+            <p>Bem-vindo ao Petshop Lobo LTDA. Um site moderno e responsivo para petshops que desejam apresentar seus serviços, conquistar clientes e facilitar o contato com tutores de animais de estimação.</p>
+            <a href="https://github.com/fernandlvs/Petshop" target="_blank">Ver no GitHub</a>
+        </div>
+    </div> 
+    <div id="modal-projeto-tech" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar-modal" id="fecharModalTech">&times;</span>
+            <h2>Detalhes do Projeto</h2>
+            <p>Projeto desenvolvido para a disciplina de Desenvolvimento Web Front-end da faculdade. Consiste na criação de uma landing page para divulgação de um evento fictício de tecnologia, com foco em estrutura semântica e estilização moderna.</p>
+            <a href="https://github.com/Kailany7/evento-tecnologia-frontend.git" target="_blank">Ver no GitHub</a>
+        </div>
+    </div>
+</div>
+    <footer class="rodape">
+        <p>&copy; 2025 Fernanda Alves.</p>
+    </footer>
 </body>
 </html>
