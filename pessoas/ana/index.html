@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ana Gusmão | Desenvolvedora Full Stack</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -42,129 +46,6 @@
 
       <section class="experience">
         <h2>Experiência Profissional</h2>
-
-        <div class="job">
-          <h3>Desenvolvedora Full Stack Web Junior — Mutant</h3>
-          <p class="time">
-            ago de 2024 – o momento · 1 ano 1 mês · São Paulo, Brasil · Remota
-          </p>
-          <p><em>Projeto desenvolvido para a Vivo via consultoria.</em></p>
-          <ul>
-            <li>
-              • Desenvolvimento de aplicações com Vue.js, em arquitetura de
-              microfrontends
-            </li>
-            <li>• Desenvolvimento de aplicações Flutter Web, com Dart</li>
-            <li>
-              • Desenvolvimento de aplicações em Java, com Quarkus, em
-              arquitetura de microsserviços
-            </li>
-            <li>
-              • Deploy de módulos e gerenciamento em nuvem utilizando Azure
-            </li>
-            <li>
-              • Adoção da estratégia de trunk-based development para entregas
-              contínuas
-            </li>
-            <li>
-              • Gerenciamento de estado com Vuex e consumo de APIs via Axios
-            </li>
-            <li>• Integração com banco de dados MongoDB</li>
-            <li>
-              • Testes automatizados: testes unitários com Jest e Vue Test
-              Utils, JUnit, testes de integração com Cypress, testes de
-              aceitação com Cucumber e testes entre navegadores
-            </li>
-            <li>
-              • Documentação e desenvolvimento de componentes com Storybook
-            </li>
-            <li>
-              • Containerização com Docker e orquestração de serviços utilizando
-              Kubernetes para gerenciamento de pods
-            </li>
-            <li>
-              • Envio de eventos para o Google Analytics por meio de tagueamento
-            </li>
-            <li>
-              • Atuação em times ágeis seguindo a metodologia Scrum, com
-              versionamento de código via Git
-            </li>
-          </ul>
-        </div>
-
-        <div class="job">
-          <h3>Desenvolvedora Web Frontend Junior — Ingate</h3>
-          <p class="time">
-            fev de 2024 – ago de 2024 · 7 meses · Japão · Remota
-          </p>
-          <ul>
-            <li>
-              • Desenvolvimento de interfaces com React.js, Next.js, Vue.js e
-              TypeScript
-            </li>
-            <li>
-              • Utilização de bibliotecas de UI como Material-UI, Tailwind CSS e
-              Ant Design
-            </li>
-            <li>• Integração com backend via Firebase</li>
-            <li>
-              • Integração com Design System via Figma e versionamento de código
-              com Git
-            </li>
-            <li>
-              • Colaboração em ambiente ágil (Scrum) e equipe multicultural, com
-              comunicação em inglês
-            </li>
-          </ul>
-        </div>
-
-        <div class="job">
-          <h3>Desenvolvedora Web Frontend Estagiária — Locale Imóveis</h3>
-          <p class="time">
-            dez de 2022 – fev de 2024 · 1 ano 3 meses · Rio Grande/RS · Remota
-          </p>
-          <ul>
-            <li>
-              • Desenvolvimento de aplicações com Next.js, TypeScript e Tailwind
-              CSS
-            </li>
-            <li>
-              • Integração com backend em Nest.js e banco de dados MongoDB
-            </li>
-            <li>• Otimização de performance e SEO técnico</li>
-            <li>
-              • Integração com Design System via Figma e versionamento de código
-              com Git
-            </li>
-            <li>• Atuação em times ágeis seguindo a metodologia Scrum</li>
-          </ul>
-        </div>
-
-        <div class="job">
-          <h3>
-            Desenvolvedora Web Full Stack Estagiária — JBR ENGENHARIA LTDA
-          </h3>
-          <p class="time">
-            ago de 2022 – fev de 2024 · 1 ano 7 meses · Campina Grande/PB ·
-            Remota
-          </p>
-          <ul>
-            <li>
-              • Desenvolvimento de interfaces com React.js, Next.js e
-              Styled-components
-            </li>
-            <li>
-              • Desenvolvimento de APIs backend com Nest.js e Express.js, com
-              persistência em MongoDB
-            </li>
-            <li>• Migração progressiva de código JavaScript para TypeScript</li>
-            <li>
-              • Integração com Design System via Figma e versionamento de código
-              com Git
-            </li>
-            <li>• Atuação em times ágeis seguindo a metodologia Scrum</li>
-          </ul>
-        </div>
       </section>
 
       <section class="projects">
@@ -189,11 +70,9 @@
       </section>
     </main>
 
-    <button id="back-to-top" title="Voltar ao topo">↑</button>
-
-    <footer class="footer">
-      <p>&copy; 2025 - /anagdinizg</p>
-    </footer>
+    <button id="back-to-top" title="Voltar ao topo">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
     <div id="modal" class="modal hidden">
       <div class="modal-content">
@@ -201,6 +80,26 @@
         <button onclick="closeModal()">Fechar</button>
       </div>
     </div>
+
+    <footer class="footer">
+      <p>©</p>
+      <div class="social-links">
+        <a
+          href="https://www.linkedin.com/in/anagdinizg"
+          target="_blank"
+          aria-label="LinkedIn"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a
+          href="https://github.com/anagdinizg"
+          target="_blank"
+          aria-label="GitHub"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>

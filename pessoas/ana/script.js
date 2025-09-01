@@ -1,18 +1,39 @@
 const skills = [
-  "Frontend: Vue.js, React.js, Next.js, TypeScript, Tailwind CSS, Styled-components, Material UI, Ant Design",
-  "Backend: Nest.js, Java, Express.js, Firebase, MongoDB",
-  "Arquitetura e DevOps: Microfrontends, Microsserviços, Azure, Docker, Kubernetes, trunk-based development",
-  "Versionamento e Colaboração: Git, Scrum, trabalho remoto e multicultural",
-  "Testes Automatizados: Jest, Vue Test Utils, JUnit, Cypress, Cucumber, testes cross-browser",
-  "Design e Documentação: Storybook, integração com Design Systems via Figma",
-  "Análise e Monitoramento: Tagueamento e eventos para Google Analytics",
+  {
+    text: "Frontend: Vue.js, React.js, Next.js, TypeScript, Tailwind CSS, Styled-components, Material UI, Ant Design",
+    icon: "fa-solid fa-code",
+  },
+  {
+    text: "Backend: Nest.js, Java, Express.js, Firebase, MongoDB",
+    icon: "fa-solid fa-server",
+  },
+  {
+    text: "Arquitetura e DevOps: Microfrontends, Microsserviços, Azure, Docker, Kubernetes, trunk-based development",
+    icon: "fa-solid fa-diagram-project",
+  },
+  {
+    text: "Versionamento e Colaboração: Git, Scrum, trabalho remoto e multicultural",
+    icon: "fa-solid fa-people-group",
+  },
+  {
+    text: "Testes Automatizados: Jest, Vue Test Utils, JUnit, Cypress, Cucumber, testes cross-browser",
+    icon: "fa-solid fa-vial",
+  },
+  {
+    text: "Design e Documentação: Storybook, integração com Design Systems via Figma",
+    icon: "fa-solid fa-pencil-ruler",
+  },
+  {
+    text: "Análise e Monitoramento: Tagueamento e eventos para Google Analytics",
+    icon: "fa-solid fa-chart-line",
+  },
 ];
 
 const skillsList = document.getElementById("skills-list");
 
 skills.forEach((skill) => {
   const li = document.createElement("li");
-  li.textContent = skill;
+  li.innerHTML = `<i class="${skill.icon}"></i> ${skill.text}`;
   skillsList.appendChild(li);
 });
 
@@ -81,7 +102,14 @@ projects.forEach((project) => {
     const a = document.createElement("a");
     a.href = link.url;
     a.target = "_blank";
-    a.textContent = link.label;
+    a.rel = "noopener noreferrer";
+
+    if (link.label.toLowerCase().includes("github")) {
+      a.innerHTML = `<i class="fab fa-github"></i> ${link.label}`;
+    } else {
+      a.textContent = link.label;
+    }
+
     linksDiv.appendChild(a);
   });
 
@@ -90,6 +118,87 @@ projects.forEach((project) => {
   card.appendChild(imgDiv);
   card.appendChild(content);
   projectsList.appendChild(card);
+});
+
+const experiences = [
+  {
+    role: "Desenvolvedora Full Stack Web Junior — Mutant",
+    period:
+      "ago de 2024 – o momento · 1 ano 1 mês · São Paulo, Brasil · Remota",
+    context: "Projeto desenvolvido para a Vivo via consultoria.",
+    tasks: [
+      "Desenvolvimento de aplicações com Vue.js, em arquitetura de microfrontends",
+      "Desenvolvimento de aplicações Flutter Web, com Dart",
+      "Desenvolvimento de aplicações em Java, com Quarkus, em arquitetura de microsserviços",
+      "Deploy de módulos e gerenciamento em nuvem utilizando Azure",
+      "Adoção da estratégia de trunk-based development para entregas contínuas",
+      "Gerenciamento de estado com Vuex e consumo de APIs via Axios",
+      "Integração com banco de dados MongoDB",
+      "Testes automatizados: testes unitários com Jest e Vue Test Utils, JUnit, testes de integração com Cypress, testes de aceitação com Cucumber e testes entre navegadores",
+      "Documentação e desenvolvimento de componentes com Storybook",
+      "Containerização com Docker e orquestração de serviços utilizando Kubernetes para gerenciamento de pods",
+      "Envio de eventos para o Google Analytics por meio de tagueamento",
+      "Atuação em times ágeis seguindo a metodologia Scrum, com versionamento de código via Git",
+    ],
+  },
+  {
+    role: "Desenvolvedora Web Frontend Junior — Ingate",
+    period: "fev de 2024 – ago de 2024 · 7 meses · Japão · Remota",
+    tasks: [
+      "Desenvolvimento de interfaces com React.js, Next.js, Vue.js e TypeScript",
+      "Utilização de bibliotecas de UI como Material-UI, Tailwind CSS e Ant Design",
+      "Integração com backend via Firebase",
+      "Integração com Design System via Figma e versionamento de código com Git",
+      "Colaboração em ambiente ágil (Scrum) e equipe multicultural, com comunicação em inglês",
+    ],
+  },
+  {
+    role: "Desenvolvedora Web Frontend Estagiária — Locale Imóveis",
+    period:
+      "dez de 2022 – fev de 2024 · 1 ano 3 meses · Rio Grande/RS · Remota",
+    tasks: [
+      "Desenvolvimento de aplicações com Next.js, TypeScript e Tailwind CSS",
+      "Integração com backend em Nest.js e banco de dados MongoDB",
+      "Otimização de performance e SEO técnico",
+      "Integração com Design System via Figma e versionamento de código com Git",
+      "Atuação em times ágeis seguindo a metodologia Scrum",
+    ],
+  },
+  {
+    role: "Desenvolvedora Web Full Stack Estagiária — JBR ENGENHARIA LTDA",
+    period:
+      "ago de 2022 – fev de 2024 · 1 ano 7 meses · Campina Grande/PB · Remota",
+    tasks: [
+      "Desenvolvimento de interfaces com React.js, Next.js e Styled-components",
+      "Desenvolvimento de APIs backend com Nest.js e Express.js, com persistência em MongoDB",
+      "Migração progressiva de código JavaScript para TypeScript",
+      "Integração com Design System via Figma e versionamento de código com Git",
+      "Atuação em times ágeis seguindo a metodologia Scrum",
+    ],
+  },
+];
+
+const experienceSection = document.querySelector(".experience");
+
+experiences.forEach((job) => {
+  const jobDiv = document.createElement("div");
+  jobDiv.classList.add("job");
+
+  let html = `<h3>${job.role}</h3>`;
+  html += `<p class="time">${job.period}</p>`;
+
+  if (job.context) {
+    html += `<p><em>${job.context}</em></p>`;
+  }
+
+  html += `<ul>`;
+  job.tasks.forEach((task) => {
+    html += `<li>• ${task}</li>`;
+  });
+  html += `</ul>`;
+
+  jobDiv.innerHTML = html;
+  experienceSection.appendChild(jobDiv);
 });
 
 function sendEmail(event) {
@@ -110,7 +219,7 @@ function sendEmail(event) {
   }
 
   const subject = `Portfólio - Contato de ${name}`;
-  const body = `Nome: ${name}\nEmail: ${email}\nMensagem:\n${message}`;
+  const body = `${message}`;
 
   const mailtoLink = `mailto:anagabrieladinizgusmao@gmail.com?subject=${encodeURIComponent(
     subject
@@ -133,6 +242,10 @@ function showModal(message) {
   const modalMessage = document.getElementById("modal-message");
   modalMessage.textContent = message;
   modal.classList.remove("hidden");
+
+  setTimeout(() => {
+    modal.classList.add("hidden");
+  }, 4000);
 }
 
 function closeModal() {
