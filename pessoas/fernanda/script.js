@@ -1,16 +1,16 @@
 function irParaTopo() {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth'
+    behavior: "smooth",
   });
 }
 
-window.addEventListener('scroll', function () {
-  const botao = document.getElementById('btnTopo');
+window.addEventListener("scroll", function () {
+  const botao = document.getElementById("btnTopo");
   if (window.scrollY > 200) {
-    botao.style.display = 'block';
+    botao.style.display = "block";
   } else {
-    botao.style.display = 'none';
+    botao.style.display = "none";
   }
 });
 
@@ -27,12 +27,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setTimeout(() => {
       mensagem.style.display = "none";
-    }, 5000); 
+    }, 5000);
   });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Modal Petshop
   const abrirPetshop = document.getElementById("abrirModalPetshop");
   const fecharPetshop = document.getElementById("fecharModalPetshop");
   const modalPetshop = document.getElementById("modal-projeto-petshop");
@@ -51,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Modal TechConnect
   const abrirTech = document.getElementById("abrirModalTech");
   const fecharTech = document.getElementById("fecharModalTech");
   const modalTech = document.getElementById("modal-projeto-tech");
@@ -70,4 +68,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
