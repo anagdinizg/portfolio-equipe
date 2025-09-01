@@ -47,6 +47,36 @@ body {
   color: var(--off-white);
 }
 
+
+.back-button {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  z-index: 10;
+  background-color: var(--highlight);
+  color: var(--text);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 12px var(--black-shadow);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  background-color: var(--light-brown);
+  color: var(--white);
+  transform: scale(1.1);
+}
+
+.back-button i {
+  pointer-events: none;
+}
+
 .profile-info {
   display: flex;
   align-items: center;
@@ -431,6 +461,13 @@ ul li:hover {
 
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .back-button {
+    left: 1rem;
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
   }
 
   section {
