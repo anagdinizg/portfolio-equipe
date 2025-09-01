@@ -6,76 +6,457 @@
     text-decoration: none; 
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1; 
+html {
+  scroll-behavior: smooth;
 }
 
 header {
-  background-color: #A89F91;
-  color: #EDE6DB;
-  padding: 20px;
-  text-align: center;
+    height: 50px; 
+    display: flex;
+    align-items: center; 
+    justify-content: space-around; 
+    font-size: 18px; 
+    font-weight: bold;
+    background-color: #f2e8dfce;
 }
 
-footer {
-  background-color: #EDE6DB;
-  color: #A89F91;
-  text-align: center;
-  padding: 15px;
-  margin-top: 50px;
+header .right {
+    display: flex; 
+    gap: 40px;     
 }
 
-.container-portfolios {
-  display: flex;
-  justify-content: space-around;    
-  gap: 30px;                    
-  flex-wrap: wrap;              
-  padding: 50px;
+
+header p a {
+    color: #483D8B;
+    text-decoration: none;
+    transition: color 0.2s ease, font-size 0.3s ease;
 }
 
-.container-portfolios p {
-    padding: 30px;
-    text-align: justify;
+a:hover {
+    color: #B7BCBF;
 }
 
-.container-portfolios h2 {
-    padding: 20px;
+main {
+    background-color: #f2e8dfd5;
+}
+
+.page-principal {
+    display: flex;
+    padding: 100px 200px;
+    gap: 150px;
+    align-items: center;
+    justify-content:space-between;
+    flex-direction: row;
+}
+
+h1 {
+  font-size: 4rem;
+  font-family: "Concert One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #483D8B;
+}
+
+.estrela {
+  font-size: 2.5rem;
+  position: relative;
+  top: -13px;
+}
+
+#self-fernanda {
+    width: 20rem;
+    border-radius: 50%;
+    border: double 7px #B7BCBF;
+}
+
+.texto-principal {
+   text-align: justify;
+   font-size: 18px;
+   color: #2D2D2D;
+   font-family: "Inter", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 500;
+   font-style: normal;
+}
+
+.pagina-de-skills {
+    flex-direction: column;
     text-align: center;
+    padding-top: 40px;
 }
 
-.card {
-  background-color: #FFF5EE;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  width: 350px; 
-  height: 400px;      
-  margin: 5px 50px;;      
-  padding: 50px 20px;
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+.titulo-page-skills h2, .titulo-page-sobre-mim h2, .titulo-page-projetos h2, .titulo-page-contatos h2, .modal-conteudo h2{
+    font-size: 2rem;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #483D8B;
+}
+
+.titulo-page-skills h2, .titulo-page-sobre-mim h2, .titulo-page-projetos h2, .titulo-page-contatos h2{
+    padding-top: 50px;
+    text-align: center;
+    
+}
+
+.linha-pequena {
+    border-bottom: 3px solid #B7BCBF; 
+    padding-bottom: 3px; 
+    display: inline-block;
+}
+
+.cards-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+}
+
+.card1, .card2, .card3, .card4, .card5, .card6 {
+    margin: 50px;
+    padding-top: 20px;
+    background-color: #FFF5EE;
+    width: 150px;
+    height: 200px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.card1:hover, .card2:hover, .card3:hover, .card4:hover, .card5:hover, .card6:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 20px;
+}
+
+.cards i {
+  font-size: 80px; 
+  color: #2d4a6d; 
+  opacity: none; 
+}
+
+.cards p {
+    padding-top: 30px;
+    font-size: 20px; 
+    font-weight: bold;
+    color: #2d4a6d; 
 }
 
 @media (max-width: 768px) {
-  .container-portfolios {
-    flex-direction: column;
-    align-items: center;
+  .card1, .card2, .card3, .card4, .card5, .card6 {
+    flex: 0 0 100%; 
   }
 }
 
-button {
+.container-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-card p {
+    text-align: center;
+    padding: 10px 100px;
+    font-size: 16px; 
+    font-weight: bold;
+    color: #2d4a6d; 
+}
+
+.card-projeto-1, .card-projeto-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 100px 50px;
+    padding-top: 40px;
+    background-color: #FFF5EE;
+    width: 1000px;
+    height: 600px;
     border-radius: 10px;
-    width: 100px;
-    height: 30px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-projeto-1:hover, .card-projeto-2:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 20px;
+}
+
+.imagem-projeto-1, .imagem-projeto-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+#page-petshop, #page-evento{
+  width: 800px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-projeto-1 h2, .card-projeto-2 h2{
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #483D8B;
+}
+
+.container-card a {
+    color: #483D8B;
+    text-decoration: none;
+}
+
+.contato {
+  padding: 60px 20px;
+  background-color: #f2e8dfd5;
+  text-align: center;
+}
+
+.contato h2 {
+  font-size: 2rem;
+  color: #483D8B;
+  margin-bottom: 30px;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form label {
+  font-weight: bold;
+  color: #2D2D2D;
+  text-align: left;
+}
+
+form input, form textarea {
+  padding: 10px;
+  border: 2px solid #B7BCBF;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+
+form button, #abrirModalTech, #abrirModalPetshop {
+  padding: 12px;
+  background-color: #483D8B;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #2d4a6d;
+}
+
+.meus-contatos {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 16px;
+  color: #2D2D2D;
+}
+
+.meus-contatos h3 {
+  font-size: 1.5rem;
+  color: #483D8B;
+  margin-bottom: 20px;
+}
+
+.icones-contato {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.icones-contato a {
+  font-size: 40px;
+  color: #483D8B;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icones-contato a:hover {
+  color: #2d4a6d;
+  transform: scale(1.1);
+}
+
+.rodape {
+  background-color: #483D8B;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+}
+
+.rodape p {
+  margin-bottom: 5px;
+}
+
+.btn-topo {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  background-color: #f2e8dfce;
+  color: #483D8B;
+  border: none;
+  border-radius: 40%;
+  padding: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+  display: none;
+}
+
+.btn-topo:hover {
+  background-color: #f2e8dfce;
+}
+
+#mensagem-sucesso {
+  margin-top: 20px;
+  padding: 15px;
+  color: #2d4a6d;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .right {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .page-principal {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 40px;
+    text-align: center;
+  }
+
+  #self-fernanda {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    margin: 20px;
+  }
+
+  .card1, .card2, .card3, .card4, .card5, .card6 {
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  .container-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-projeto-1, .card-projeto-2 {
+    width: 90%;
+    height: auto;
+    margin: 40px 0;
+    padding: 20px;
+  }
+
+  #page-petshop, #page-evento {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .container-card p {
+    padding: 10px 20px;
+  }
+
+  form {
+    padding: 0 20px;
+  }
+
+  .icones-contato {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .btn-topo {
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-conteudo {
+  background-color: #FFF5EE;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+}
+
+.modal-conteudo h2, .modal-conteudo p {
+    padding: 10px;
+}
+
+.fechar-modal {
+  color: #483D8B;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.fechar-modal:hover {
+  color: #2d4a6d;
 }
