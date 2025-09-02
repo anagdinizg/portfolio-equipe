@@ -1,146 +1,185 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Amanda Lanay — Portfólio</title>
     <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
+  </head>
+  <body>
     <header class="navbar">
-        <div class="container">
-            <a href="/index.html" class="back-button" aria-label="Voltar para o início">&#8249;</a>
-            <h1 class="logo">Amanda Lanay</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#depoimentos">Depoimentos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+      <div class="container">
+        <a
+          href="/index.html"
+          class="back-button"
+          aria-label="Voltar para o início"
+          >&#8249;</a
+        >
+        <h1 class="logo">Amanda Lanay</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
     </header>
 
     <section class="hero" id="top">
-        <div class="hero-left">
-            <h1>Olá, eu sou Amanda</h1>
-            <p class="lead"> Sou estudante de Sistemas de Informação, com perfil comunicativo e criativo, sempre em busca de desenvolver soluções tecnológicas eficientes e inovadoras.
-            </p>
-            <a class="cta" href="#projetos">Ver meus projetos</a>
-        </div>
+      <div class="hero-left">
+        <h1>Olá, eu sou Amanda</h1>
+        <p class="lead">
+          Sou estudante de Sistemas de Informação, com perfil comunicativo e
+          criativo, sempre em busca de desenvolver soluções tecnológicas
+          eficientes e inovadoras.
+        </p>
+        <a class="cta" href="#projetos">Ver meus projetos</a>
+      </div>
 
-        <div class="hero-right">
-            <div class="photo-frame">
-                <img src="../../assets/amanda.jpg" alt="Foto de Amanda Lanay (substitua pelo arquivo real)">
-            </div>
+      <div class="hero-right">
+        <div class="photo-frame">
+          <img
+            src="../../public/assets/amanda.jpg"
+            alt="Foto de Amanda Lanay (substitua pelo arquivo real)"
+          />
         </div>
+      </div>
     </section>
 
     <section id="sobre" class="sobre">
-        <h2>Sobre mim</h2>
-        <p>
-            Tenho experiência em projetos de interface e front-end, unindo sensibilidade visual e boas práticas de desenvolvimento.
-            Busco sempre aprender novas ferramentas e entregar soluções que encantam usuários e cumprem objetivos de produto.
-        </p>
+      <h2>Sobre mim</h2>
+      <p>
+        Tenho experiência em projetos de interface e front-end, unindo
+        sensibilidade visual e boas práticas de desenvolvimento. Busco sempre
+        aprender novas ferramentas e entregar soluções que encantam usuários e
+        cumprem objetivos de produto.
+      </p>
     </section>
 
     <section class="search-courses">
-        <h3>Procure por algo</h3>
-        <div class="search-box">
-            <input type="text" placeholder="Pesquisar..." aria-label="Pesquisar" />
-            <button>Pesquisar</button>
-        </div>
+      <h3>Procure por algo</h3>
+      <div class="search-box">
+        <input type="text" placeholder="Pesquisar..." aria-label="Pesquisar" />
+        <button>Pesquisar</button>
+      </div>
     </section>
 
     <section id="projetos" class="projetos">
-        <h2>Meus Projetos</h2>
-        <div class="projetos-grid">
+      <h2>Meus Projetos</h2>
+      <div class="projetos-grid">
+        <article class="projeto-card">
+          <img src="../../public/assets/cdc06.jpg" alt="Capa do Projeto 1" />
+          <h3>Centelhas do Cristo</h3>
+          <p>
+            Website desenvolvido com o objetivo de aumentar a visibilidade do
+            projeto Centelhas do Cristo facilitando a chegada de doações de
+            alimento a pessoas em siituação de rua.
+          </p>
+          <a
+            class="btn-projeto"
+            href="https://centelhas-do-cristo.vercel.app/"
+            target="_blank"
+            rel="noopener"
+            >Ver Projeto</a
+          >
+        </article>
+      </div>
 
-            <article class="projeto-card">
-                <img src="../../assets/cdc06.jpg" alt="Capa do Projeto 1">
-                <h3> Centelhas do Cristo </h3>
-                <p>Website desenvolvido com o objetivo de aumentar a visibilidade do projeto Centelhas do Cristo facilitando a chegada de doações de alimento a pessoas em siituação de rua.</p>
-                <a class="btn-projeto"
-                   href="https://centelhas-do-cristo.vercel.app/"
-                   target="_blank"
-                   rel="noopener">Ver Projeto</a>
-            </article>
-
-        </div>
-
-        <p class="info-extra"></p>
+      <p class="info-extra"></p>
     </section>
 
     <section id="depoimentos" class="depoimentos">
-        <h2>O que falam sobre mim</h2>
+      <h2>O que falam sobre mim</h2>
 
-        <div class="carousel" aria-roledescription="carousel">
-            <div class="slides">
+      <div class="carousel" aria-roledescription="carousel">
+        <div class="slides">
+          <div class="slide active" aria-hidden="false">
+            <blockquote>
+              <p>
+                “Amanda entregou o projeto com extremo cuidado e design
+                impecável. Recomendo sempre.”
+              </p>
+              <cite>— Cliente A</cite>
+            </blockquote>
+          </div>
 
-                <div class="slide active" aria-hidden="false">
-                    <blockquote>
-                        <p>“Amanda entregou o projeto com extremo cuidado e design impecável. Recomendo sempre.”</p>
-                        <cite>— Cliente A</cite>
-                    </blockquote>
-                </div>
+          <div class="slide" aria-hidden="true">
+            <blockquote>
+              <p>
+                “Profissional, pontual e muito criativa. Foi um prazer trabalhar
+                com ela.”
+              </p>
+              <cite>— Cliente B</cite>
+            </blockquote>
+          </div>
 
-                <div class="slide" aria-hidden="true">
-                    <blockquote>
-                        <p>“Profissional, pontual e muito criativa. Foi um prazer trabalhar com ela.”</p>
-                        <cite>— Cliente B</cite>
-                    </blockquote>
-                </div>
-
-                <div class="slide" aria-hidden="true">
-                    <blockquote>
-                        <p>“Ótima comunicação e atenção aos detalhes. Resultado final excelente.”</p>
-                        <cite>— Cliente C</cite>
-                    </blockquote>
-                </div>
-
-            </div>
-
-            <div class="carousel-controls">
-                <button id="prev" aria-label="Depoimento anterior">⟨</button>
-                <button id="next" aria-label="Próximo depoimento">⟩</button>
-            </div>
+          <div class="slide" aria-hidden="true">
+            <blockquote>
+              <p>
+                “Ótima comunicação e atenção aos detalhes. Resultado final
+                excelente.”
+              </p>
+              <cite>— Cliente C</cite>
+            </blockquote>
+          </div>
         </div>
+
+        <div class="carousel-controls">
+          <button id="prev" aria-label="Depoimento anterior">⟨</button>
+          <button id="next" aria-label="Próximo depoimento">⟩</button>
+        </div>
+      </div>
     </section>
 
     <section class="join">
-        <div class="join-card">
-            <h3>Entra em contato comigo!</h3>
-            <p>Se você tem um projeto ou quer conversar, me envie uma mensagem — vou adorar saber mais.</p>
-            <a class="cta" href="#contato">Entrar em contato</a>
-        </div>
+      <div class="join-card">
+        <h3>Entra em contato comigo!</h3>
+        <p>
+          Se você tem um projeto ou quer conversar, me envie uma mensagem — vou
+          adorar saber mais.
+        </p>
+        <a class="cta" href="#contato">Entrar em contato</a>
+      </div>
     </section>
 
     <section id="contato" class="contato">
-        <h2>Contato</h2>
-        <form id="contactForm" action="#" method="post" onsubmit="return handleForm(event)">
-            <input type="text" name="nome" placeholder="Seu nome" required />
-            <input type="email" name="email" placeholder="Seu email" required />
-            <input type="tel" name="telefone" placeholder="Telefone (opcional)" />
-            <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+      <h2>Contato</h2>
+      <form
+        id="contactForm"
+        action="#"
+        method="post"
+        onsubmit="return handleForm(event)"
+      >
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu email" required />
+        <input type="tel" name="telefone" placeholder="Telefone (opcional)" />
+        <textarea
+          name="mensagem"
+          rows="5"
+          placeholder="Sua mensagem"
+          required
+        ></textarea>
 
-            <div class="contact-info">
-                <p><strong>Email:</strong> amanda.lanay@example.com</p>
-                <p><strong>Telefone:</strong> +55 11 9XXXX-XXXX</p>
-                <p><strong>Local:</strong> Campina Grande - PB </p>
-            </div>
+        <div class="contact-info">
+          <p><strong>Email:</strong> amanda.lanay@example.com</p>
+          <p><strong>Telefone:</strong> +55 11 9XXXX-XXXX</p>
+          <p><strong>Local:</strong> Campina Grande - PB</p>
+        </div>
 
-            <button type="submit" class="btn-submit">Enviar mensagem</button>
-        </form>
+        <button type="submit" class="btn-submit">Enviar mensagem</button>
+      </form>
     </section>
 
     <footer class="footer">
-        <p>© <span id="year"></span> Amanda Lanay — Todos os direitos reservados.</p>
+      <p>
+        © <span id="year"></span> Amanda Lanay — Todos os direitos reservados.
+      </p>
     </footer>
 
     <button id="backToTop" aria-label="Voltar ao topo">↑</button>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

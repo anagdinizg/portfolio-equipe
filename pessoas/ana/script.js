@@ -43,7 +43,7 @@ const projects = [
     subtitle: "Next.js | Nest.js | MongoDB",
     description:
       "Plataforma web para engenheiros civis, com registro de materiais, cálculos e geração de relatórios.",
-    image: "/assets/fasteng01.jpg",
+    image: "../../public/assets/fasteng01.jpg",
     links: [{ label: "Visitar", url: "https://fastengapp.com.br/" }],
   },
   {
@@ -51,7 +51,7 @@ const projects = [
     subtitle: "React.js | Redux",
     description:
       "Aplicação para acompanhar ações favoritas, gráficos e tendências.",
-    image: "/assets/share.jpg",
+    image: "../../public/assets/share.jpg",
     links: [
       { label: "GitHub", url: "https://github.com/seu-repositorio-stocks" },
     ],
@@ -60,14 +60,14 @@ const projects = [
     title: "Airbnb Clone",
     subtitle: "Next.js",
     description: "Clone do Airbnb com Mapbox, calendário e reservas.",
-    image: "/assets/airbnb.jpg",
+    image: "../../public/assets/airbnb.jpg",
     links: [{ label: "GitHub", url: "https://github.com/seu-repositorio" }],
   },
   {
     title: "Centelhas do Cristo",
     subtitle: "Vue.js | JavaScript",
     description: "Site estático responsivo para ONG local.",
-    image: "/assets/cdc06.jpg",
+    image: "../../public/assets/cdc06.jpg",
     links: [
       { label: "GitHub", url: "https://github.com/anagdinizg/cdc-versao2" },
       { label: "Visitar", url: "https://centelhas-do-cristo.vercel.app/" },
